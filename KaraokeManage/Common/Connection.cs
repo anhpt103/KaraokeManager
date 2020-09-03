@@ -1,24 +1,31 @@
-﻿using System.Configuration;
+﻿using log4net;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace KaraokeManage.Common
 {
     public static class Connection
     {
-        public static string SetDBConnection(string Datasource, string Database, string UserName, string Password)
-        {
-            string connString = @"Data Source=" + Datasource + ";Initial Catalog=" + Database + ";Persist Security Info=True;User ID=" + UserName + ";Password=" + Password;
-            string msg = Exec.ConnectionString = connString;
-            return msg;
-        }
-
+        private static readonly ILog log = LogManager.GetLogger(Environment.MachineName);
         public static string SetDBConnection()
         {
-            string Datasource = ConfigurationManager.AppSettings.Get("Datasource");
-            string Database = ConfigurationManager.AppSettings.Get("Database");
-            string UserName = ConfigurationManager.AppSettings.Get("UserName");
-            string Password = ConfigurationManager.AppSettings.Get("Password");
+            string connString = ConfigurationManager.ConnectionStrings["KaraokeManageConnection"].ToString();
+            Exec.ConnectionString = connString;
 
-            return SetDBConnection(Datasource, Database, UserName, Password);
+            string msg = "";
+            SqlConnection connection = new SqlConnection(connString);
+            try
+            {
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                msg = ex.Message;
+                log.Error(msg);
+            }
+
+            return msg;
         }
     }
 }
