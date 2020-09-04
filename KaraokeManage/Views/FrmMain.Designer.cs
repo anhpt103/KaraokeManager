@@ -39,6 +39,10 @@
             this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
             this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.skinGalleryItems = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.itemComputerName = new DevExpress.XtraBars.BarListItem();
+            this.itemDatabaseName = new DevExpress.XtraBars.BarListItem();
+            this.itemIpAddress = new DevExpress.XtraBars.BarListItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -49,12 +53,14 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.rbStatus = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.tabDisplay = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCollection_32px)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -70,14 +76,20 @@
             this.btnPhanQuyen,
             this.btnBackup,
             this.btnRestore,
-            this.skinGalleryItems});
+            this.skinGalleryItems,
+            this.barHeaderItem1,
+            this.itemComputerName,
+            this.itemDatabaseName,
+            this.itemIpAddress});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 8;
+            this.ribbon.MaxItemId = 13;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemHypertextLabel1});
             this.ribbon.Size = new System.Drawing.Size(1258, 158);
             this.ribbon.StatusBar = this.rbStatus;
             // 
@@ -145,6 +157,7 @@
             this.btnChangePassword.Id = 2;
             this.btnChangePassword.ImageOptions.ImageIndex = 34;
             this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChangePassword_ItemClick);
             // 
             // btnLogout
             // 
@@ -182,6 +195,30 @@
             this.skinGalleryItems.Caption = "skinRibbonGalleryBarItem1";
             this.skinGalleryItems.Id = 7;
             this.skinGalleryItems.Name = "skinGalleryItems";
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "barHeaderItem1";
+            this.barHeaderItem1.Id = 8;
+            this.barHeaderItem1.Name = "barHeaderItem1";
+            // 
+            // itemComputerName
+            // 
+            this.itemComputerName.Id = 10;
+            this.itemComputerName.ImageOptions.Image = global::KaraokeManage.Properties.Resources.Computer_icon_16px;
+            this.itemComputerName.Name = "itemComputerName";
+            // 
+            // itemDatabaseName
+            // 
+            this.itemDatabaseName.Id = 11;
+            this.itemDatabaseName.ImageOptions.Image = global::KaraokeManage.Properties.Resources.Database_Active_icon_16px;
+            this.itemDatabaseName.Name = "itemDatabaseName";
+            // 
+            // itemIpAddress
+            // 
+            this.itemIpAddress.Id = 12;
+            this.itemIpAddress.ImageOptions.Image = global::KaraokeManage.Properties.Resources.ip_icon_16px;
+            this.itemIpAddress.Name = "itemIpAddress";
             // 
             // ribbonPage1
             // 
@@ -250,8 +287,15 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "ribbonPageGroup5";
             // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            // 
             // rbStatus
             // 
+            this.rbStatus.ItemLinks.Add(this.itemComputerName);
+            this.rbStatus.ItemLinks.Add(this.itemDatabaseName);
+            this.rbStatus.ItemLinks.Add(this.itemIpAddress);
             this.rbStatus.Location = new System.Drawing.Point(0, 567);
             this.rbStatus.Name = "rbStatus";
             this.rbStatus.Ribbon = this.ribbon;
@@ -294,6 +338,7 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCollection_32px)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +369,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.Utils.ImageCollection imgCollection_32px;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
+        private DevExpress.XtraBars.BarListItem itemComputerName;
+        private DevExpress.XtraBars.BarListItem itemDatabaseName;
+        private DevExpress.XtraBars.BarListItem itemIpAddress;
     }
 }

@@ -173,6 +173,16 @@ namespace KaraokeManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Computer_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("Computer-icon_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Control_Panel_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("Control-Panel-icon_32px", resourceCulture);
@@ -196,6 +206,16 @@ namespace KaraokeManage.Properties {
         internal static System.Drawing.Bitmap cryptography_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("cryptography-icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Database_Active_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("Database-Active-icon_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,16 @@ namespace KaraokeManage.Properties {
         internal static System.Drawing.Bitmap invoice_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("invoice-icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ip_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("ip-icon_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
