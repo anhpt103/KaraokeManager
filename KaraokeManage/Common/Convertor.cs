@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,50 @@ namespace KaraokeManage.Common
 {
     static public class Convertor
     {
+        static public string ObjectToJson(object obj, out string value)
+        {
+            value = "";
+            try
+            {
+                value = JsonConvert.SerializeObject(obj);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+            return "";
+        }
+        static public string JsonToObject<T>(object data, out T obj) where T : class
+        {
+            obj = null;
+
+            try
+            {
+                obj = JsonConvert.DeserializeObject<T>(Convert.ToString(data));
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+
+            return "";
+        }
+        static public string JsonToObject(object data, Type type, out object obj)
+        {
+            obj = null;
+
+            try
+            {
+                obj = JsonConvert.DeserializeObject(Convert.ToString(data), type);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+
+            return "";
+        }
+
         public class Utf8StringWriter : StringWriter
         {
             public override Encoding Encoding { get { return Encoding.UTF8; } }
@@ -96,6 +141,7 @@ namespace KaraokeManage.Common
 
             value = null;
             if (isXML) msg = ObjectToXML(objectData, out value);
+            else msg = ObjectToJson(objectData, out value);
 
             return msg;
         }
@@ -116,6 +162,7 @@ namespace KaraokeManage.Common
 
             obj = null;
             if (isXML) msg = XMLToObject(stringData, out obj);
+            else msg = JsonToObject(stringData, out obj);
 
             return msg;
         }
