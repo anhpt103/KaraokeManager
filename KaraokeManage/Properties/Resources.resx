@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="credit-card-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\credit-card-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="User-Group-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-Group-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,29 +133,35 @@
   <data name="sound-icon_2_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound-icon_2_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-password-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-password-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Type-multiple-correct-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Type-multiple-correct-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="secrecy-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secrecy-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Database-Active-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Database-Active-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Mail-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mail-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder-images-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder-images-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bin-red-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bin-red-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Downloads-Folder-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Downloads-Folder-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Backup-Folder-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Backup-Folder-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Trash-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trash-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder-images-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder-images-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Calculator-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Calculator-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Help-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reload-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reload-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stop-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stop-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,17 +172,20 @@
   <data name="Sex-Male-Female-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sex-Male-Female-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chat-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chat-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Trash-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Register-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Register-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cryptography-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cryptography-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chat-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chat-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="name-card-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name-card-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User-password-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-password-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,29 +196,29 @@
   <data name="add-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sex-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sex-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Standby-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Standby-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Backup-Folder-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Backup-Folder-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Calculator-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calculator-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reload-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reload-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="credit-card-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\credit-card-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button-Close-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Close-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="back-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Database-Active-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Database-Active-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="invoice-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invoice-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Go-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Go-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Save-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="back-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="options-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\options-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,20 +226,17 @@
   <data name="edit-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-password-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-password-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cryptography-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cryptography-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Control-Panel-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Control-Panel-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Action-view-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Action-view-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logout-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logout-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cart-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cart-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Database-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Database-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logoff-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logoff-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,29 +247,35 @@
   <data name="Reboot-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reboot-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cash-register-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cash-register-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ip-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ip-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Action-view-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Action-view-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Register-icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Register-icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sex-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sex-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Database-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Database-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="undo-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undo-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bin-red-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bin-red-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Go-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Go-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Help-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Help-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logout-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Computer-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Computer-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forward-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forward-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sound-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,10 +283,10 @@
   <data name="Search-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Downloads-Folder-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Downloads-Folder-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cash-register-icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-register-icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ip-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ip-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="product-icon_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product-icon_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

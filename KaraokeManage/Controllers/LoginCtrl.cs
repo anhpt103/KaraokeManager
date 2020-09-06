@@ -13,8 +13,9 @@ namespace KaraokeManage.Controllers
             if (string.IsNullOrEmpty(model.UserName)) return "Tài khoản không thể trống";
             if (string.IsNullOrEmpty(model.Password)) return "Mật khẩu không thể trống";
 
-            Exec.ExecStore("usp_CheckInfoLogin", new { model.UserName, model.Password }, out string msg);
+            string msg = Exec.ExecStore("usp_CheckInfoLogin", new { model.UserName, model.Password }, out string result);
             if (!string.IsNullOrEmpty(msg)) { log.Error(msg); return msg; }
+            if (!string.IsNullOrEmpty(result)) return result;
 
             return "";
         }

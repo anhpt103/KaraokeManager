@@ -43,6 +43,9 @@
             this.itemComputerName = new DevExpress.XtraBars.BarListItem();
             this.itemDatabaseName = new DevExpress.XtraBars.BarListItem();
             this.itemIpAddress = new DevExpress.XtraBars.BarListItem();
+            this.btnLoaiHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhomHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHangHoa = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,10 +60,11 @@
             this.rbStatus = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.tabDisplay = new System.Windows.Forms.TabControl();
+            this.xtraTabMain = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCollection_32px)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabMain)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -80,9 +84,12 @@
             this.barHeaderItem1,
             this.itemComputerName,
             this.itemDatabaseName,
-            this.itemIpAddress});
+            this.itemIpAddress,
+            this.btnLoaiHang,
+            this.btnNhomHang,
+            this.btnHangHoa});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 13;
+            this.ribbon.MaxItemId = 16;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -220,6 +227,34 @@
             this.itemIpAddress.ImageOptions.Image = global::KaraokeManage.Properties.Resources.ip_icon_16px;
             this.itemIpAddress.Name = "itemIpAddress";
             // 
+            // btnLoaiHang
+            // 
+            this.btnLoaiHang.Caption = "Loại hàng";
+            this.btnLoaiHang.Id = 13;
+            this.btnLoaiHang.ImageOptions.Image = global::KaraokeManage.Properties.Resources.Type_multiple_correct_icon_16px;
+            this.btnLoaiHang.Name = "btnLoaiHang";
+            this.btnLoaiHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnLoaiHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiHang_ItemClick);
+            // 
+            // btnNhomHang
+            // 
+            this.btnNhomHang.Caption = "Nhóm hàng";
+            this.btnNhomHang.Id = 14;
+            this.btnNhomHang.ImageOptions.Image = global::KaraokeManage.Properties.Resources.group_icon_16px;
+            this.btnNhomHang.Name = "btnNhomHang";
+            this.btnNhomHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // btnHangHoa
+            // 
+            this.btnHangHoa.Caption = "Hàng hóa";
+            this.btnHangHoa.Id = 15;
+            this.btnHangHoa.ImageOptions.Image = global::KaraokeManage.Properties.Resources.product_icon_16px;
+            this.btnHangHoa.Name = "btnHangHoa";
+            this.btnHangHoa.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -260,8 +295,11 @@
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnLoaiHang);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnNhomHang);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnHangHoa);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Quản lý hàng hóa";
             // 
             // ribbonPage4
             // 
@@ -311,21 +349,22 @@
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "ribbonPage5";
             // 
-            // tabDisplay
+            // xtraTabMain
             // 
-            this.tabDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabDisplay.Location = new System.Drawing.Point(0, 158);
-            this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.SelectedIndex = 0;
-            this.tabDisplay.Size = new System.Drawing.Size(1258, 409);
-            this.tabDisplay.TabIndex = 2;
+            this.xtraTabMain.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
+            this.xtraTabMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabMain.Location = new System.Drawing.Point(0, 158);
+            this.xtraTabMain.Name = "xtraTabMain";
+            this.xtraTabMain.Size = new System.Drawing.Size(1258, 409);
+            this.xtraTabMain.TabIndex = 5;
+            this.xtraTabMain.CloseButtonClick += new System.EventHandler(this.xtraTabMain_CloseButtonClick);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 591);
-            this.Controls.Add(this.tabDisplay);
+            this.Controls.Add(this.xtraTabMain);
             this.Controls.Add(this.rbStatus);
             this.Controls.Add(this.ribbon);
             this.Name = "FrmMain";
@@ -339,6 +378,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCollection_32px)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,7 +398,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private System.Windows.Forms.TabControl tabDisplay;
         private DevExpress.XtraBars.BarButtonItem btnLogin;
         private DevExpress.XtraBars.BarButtonItem btnChangePassword;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
@@ -374,5 +413,9 @@
         private DevExpress.XtraBars.BarListItem itemComputerName;
         private DevExpress.XtraBars.BarListItem itemDatabaseName;
         private DevExpress.XtraBars.BarListItem itemIpAddress;
+        private DevExpress.XtraBars.BarButtonItem btnLoaiHang;
+        private DevExpress.XtraBars.BarButtonItem btnNhomHang;
+        private DevExpress.XtraBars.BarButtonItem btnHangHoa;
+        private DevExpress.XtraTab.XtraTabControl xtraTabMain;
     }
 }

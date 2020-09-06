@@ -1,9 +1,13 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
 using KaraokeManage.Common;
 using KaraokeManage.Controllers;
 using KaraokeManage.Models;
+using KaraokeManage.Views.UCControl;
 using System;
 using System.Configuration;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
@@ -19,6 +23,7 @@ namespace KaraokeManage.Views
             SetBottomInfo();
             DisableEnableMenuLogin(true);
         }
+
         public void DefaultSkins()
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
@@ -61,6 +66,9 @@ namespace KaraokeManage.Views
             btnLogout.Enabled = !e;
             btnPhanQuyen.Enabled = !e;
             btnRestore.Enabled = !e;
+            btnLoaiHang.Enabled = !e;
+            btnNhomHang.Enabled = !e;
+            btnHangHoa.Enabled = !e;
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -131,6 +139,49 @@ namespace KaraokeManage.Views
         {
             FrmChangePassword frmChangePassword = new FrmChangePassword();
             frmChangePassword.ShowDialog();
+        }
+
+        private void AddNewTabPage(string Name, string Text, UserControl ucContent)
+        {
+            XtraTabPage newTabPage = new XtraTabPage();
+            newTabPage.Name = Name;
+            newTabPage.Text = Text;
+            newTabPage.ShowCloseButton = DevExpress.Utils.DefaultBoolean.True;
+            foreach (XtraTabPage tabpage in xtraTabMain.TabPages)
+            {
+                if (tabpage.Name == newTabPage.Name)
+                {
+                    xtraTabMain.SelectedTabPage = tabpage;
+                    return;
+                }
+            }
+            xtraTabMain.TabPages.Add(newTabPage);
+            xtraTabMain.SelectedTabPageIndex = xtraTabMain.TabPages.Count - 1;
+            newTabPage.Appearance.PageClient.BackColor = System.Drawing.Color.Cyan;
+            newTabPage.Appearance.PageClient.Options.UseBackColor = true;
+            ucContent.Dock = DockStyle.Fill;
+            newTabPage.Controls.Add(ucContent);
+        }
+
+        private void CloseTabPage()
+        {
+            if (xtraTabMain.SelectedTabPageIndex != 0)
+            {
+                int index = xtraTabMain.SelectedTabPageIndex;
+                xtraTabMain.TabPages.RemoveAt(index);
+                xtraTabMain.SelectedTabPageIndex = index - 1;
+            }
+        }
+
+        private void btnLoaiHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            UC_LoaiHang uC_LoaiHang = new UC_LoaiHang();
+            AddNewTabPage("LoaiHang", "Loại hàng", uC_LoaiHang);
+        }
+
+        private void xtraTabMain_CloseButtonClick(object sender, EventArgs e)
+        {
+            CloseTabPage();
         }
     }
 }

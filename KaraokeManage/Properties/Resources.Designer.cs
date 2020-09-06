@@ -283,6 +283,16 @@ namespace KaraokeManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap group_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("group-icon_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap headset_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("headset-icon_32px", resourceCulture);
@@ -396,6 +406,16 @@ namespace KaraokeManage.Properties {
         internal static System.Drawing.Bitmap options_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("options-icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("product-icon_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +576,16 @@ namespace KaraokeManage.Properties {
         internal static System.Drawing.Bitmap Trash_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("Trash-icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Type_multiple_correct_icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("Type-multiple-correct-icon_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
