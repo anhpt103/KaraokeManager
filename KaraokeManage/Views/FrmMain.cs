@@ -1,27 +1,29 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
-using DevExpress.XtraTab.ViewInfo;
 using KaraokeManage.Common;
 using KaraokeManage.Controllers;
 using KaraokeManage.Models;
 using KaraokeManage.Views.UCControl;
 using System;
 using System.Configuration;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static KaraokeManage.Views.FrmLogin;
 
 namespace KaraokeManage.Views
 {
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        FrmLogin frmLogin = null;
         public FrmMain()
         {
             InitializeComponent();
             SetBottomInfo();
             DisableEnableMenuLogin(true);
+            frmLogin = new FrmLogin();
+            frmLogin.OnClickLoginMethod += new LoginHandler(DoLogin);
         }
 
         public void DefaultSkins()
@@ -58,7 +60,7 @@ namespace KaraokeManage.Views
             itemIpAddress.Caption = "IP: " + GetLocalIPAddress();
         }
 
-        public void DisableEnableMenuLogin(bool e)
+        private void DisableEnableMenuLogin(bool e)
         {
             btnLogin.Enabled = e;
             btnBackup.Enabled = !e;
@@ -92,23 +94,36 @@ namespace KaraokeManage.Views
             return "";
         }
 
-        private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private bool CheckFormIsShow(string name)
         {
-            FrmLogin frmLogin = null;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-            CheckLogin:
-            if (frmLogin == null || frmLogin.IsDisposed) frmLogin = new FrmLogin();
-            if (frmLogin.ShowDialog() == DialogResult.OK)
+        private void DoLogin()
+        {
+            var isOpen = CheckFormIsShow(frmLogin.Name);
+            if (frmLogin != null && !frmLogin.IsDisposed && !isOpen) frmLogin.ShowDialog();
+            else
             {
                 if (string.IsNullOrEmpty(frmLogin.txtUserName.Text))
                 {
                     XtraMessageBox.Show("Tài khoản không thể trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    goto CheckLogin;
+                    frmLogin.txtUserName.SelectAll();
+                    return;
                 }
                 if (string.IsNullOrEmpty(frmLogin.txtPassword.Text))
                 {
                     XtraMessageBox.Show("Mật khẩu không thể trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    goto CheckLogin;
+                    frmLogin.txtPassword.SelectAll();
+                    return;
                 }
 
                 string UserName = frmLogin.txtUserName.Text.Trim();
@@ -117,13 +132,20 @@ namespace KaraokeManage.Views
                 if (msg.Length > 0)
                 {
                     XtraMessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    goto CheckLogin;
+                    frmLogin.txtUserName.SelectAll();
+                    return;
                 }
                 else
                 {
                     DisableEnableMenuLogin(false);
+                    frmLogin.Close();
                 }
             }
+        }
+
+        private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DoLogin();
         }
 
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

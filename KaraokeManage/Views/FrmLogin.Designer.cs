@@ -181,9 +181,9 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperLinkSignup;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.CheckEdit ckbRemember;
-        private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         public DevExpress.XtraEditors.TextEdit txtPassword;
         public DevExpress.XtraEditors.TextEdit txtUserName;
+        public DevExpress.XtraEditors.SimpleButton btnLogin;
     }
 }

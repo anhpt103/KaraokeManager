@@ -71,6 +71,7 @@
     <Compile Include="Controllers\RegisterCtrl.cs" />
     <Compile Include="Controllers\LoginCtrl.cs" />
     <Compile Include="Enums\Enum.cs" />
+    <Compile Include="Models\LoaiHangModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Program.cs" />
