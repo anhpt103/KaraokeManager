@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_LoaiHang));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.grcLoaiHang = new DevExpress.XtraGrid.GridControl();
             this.loaiHangModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -37,6 +38,8 @@
             this.TenLoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IsDelete_Text = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemIsDelete = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.IsDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -48,12 +51,13 @@
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.IsDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnAddNewRow = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcLoaiHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiHangModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvLoaiHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemIsDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -97,14 +101,14 @@
             this.grvLoaiHang.GridControl = this.grcLoaiHang;
             this.grvLoaiHang.Name = "grvLoaiHang";
             this.grvLoaiHang.OptionsView.ColumnAutoWidth = false;
-            this.grvLoaiHang.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.grvLoaiHang.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
             // 
             // ID
             // 
             this.ID.AppearanceHeader.Options.UseTextOptions = true;
             this.ID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ID.Caption = "STT";
-            this.ID.FieldName = "colSTT";
+            this.ID.FieldName = "ID";
             this.ID.Name = "ID";
             this.ID.Visible = true;
             this.ID.VisibleIndex = 0;
@@ -113,7 +117,7 @@
             // TenLoai
             // 
             this.TenLoai.Caption = "Tên loại hàng";
-            this.TenLoai.FieldName = "colTenLoai";
+            this.TenLoai.FieldName = "TenLoai";
             this.TenLoai.Name = "TenLoai";
             this.TenLoai.Visible = true;
             this.TenLoai.VisibleIndex = 1;
@@ -122,7 +126,7 @@
             // MoTa
             // 
             this.MoTa.Caption = "Mô tả";
-            this.MoTa.FieldName = "colMoTa";
+            this.MoTa.FieldName = "MoTa";
             this.MoTa.Name = "MoTa";
             this.MoTa.Visible = true;
             this.MoTa.VisibleIndex = 2;
@@ -131,11 +135,25 @@
             // IsDelete_Text
             // 
             this.IsDelete_Text.Caption = "Trạng thái";
-            this.IsDelete_Text.FieldName = "colIsDelete_Text";
+            this.IsDelete_Text.ColumnEdit = this.repositoryItemIsDelete;
+            this.IsDelete_Text.FieldName = "IsDelete_Text";
             this.IsDelete_Text.Name = "IsDelete_Text";
             this.IsDelete_Text.Visible = true;
             this.IsDelete_Text.VisibleIndex = 3;
             this.IsDelete_Text.Width = 100;
+            // 
+            // repositoryItemIsDelete
+            // 
+            this.repositoryItemIsDelete.AutoHeight = false;
+            this.repositoryItemIsDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemIsDelete.Name = "repositoryItemIsDelete";
+            // 
+            // IsDelete
+            // 
+            this.IsDelete.Caption = "IsDelete";
+            this.IsDelete.FieldName = "IsDelete";
+            this.IsDelete.Name = "IsDelete";
             // 
             // mainRibbonControl
             // 
@@ -148,9 +166,10 @@
             this.btnSaveAndNew,
             this.btnReset,
             this.btnDelete,
-            this.btnClose});
+            this.btnClose,
+            this.btnAddNewRow});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.MaxItemId = 10;
+            this.mainRibbonControl.MaxItemId = 11;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
@@ -221,6 +240,7 @@
             this.mainRibbonPageGroup.ItemLinks.Add(this.btnReset);
             this.mainRibbonPageGroup.ItemLinks.Add(this.btnDelete);
             this.mainRibbonPageGroup.ItemLinks.Add(this.btnClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.btnAddNewRow);
             this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
             this.mainRibbonPageGroup.Text = "Chức năng";
             // 
@@ -243,11 +263,14 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // IsDelete
+            // btnAddNewRow
             // 
-            this.IsDelete.Caption = "IsDelete";
-            this.IsDelete.FieldName = "colIsDelete";
-            this.IsDelete.Name = "IsDelete";
+            this.btnAddNewRow.Caption = "Thêm";
+            this.btnAddNewRow.Id = 10;
+            this.btnAddNewRow.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnAddNewRow.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnAddNewRow.Name = "btnAddNewRow";
+            this.btnAddNewRow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddNewRow_ItemClick);
             // 
             // UC_LoaiHang
             // 
@@ -264,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grcLoaiHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiHangModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvLoaiHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemIsDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -293,5 +317,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn IsDelete_Text;
         private System.Windows.Forms.BindingSource loaiHangModelBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn IsDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemIsDelete;
+        private DevExpress.XtraBars.BarButtonItem btnAddNewRow;
     }
 }
