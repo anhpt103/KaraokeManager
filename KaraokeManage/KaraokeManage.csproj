@@ -68,6 +68,7 @@
     <Compile Include="Common\Convertor.cs" />
     <Compile Include="Common\Exec.cs" />
     <Compile Include="Common\MD5Encrypt.cs" />
+    <Compile Include="Controllers\LoaiHangCtrl.cs" />
     <Compile Include="Controllers\RegisterCtrl.cs" />
     <Compile Include="Controllers\LoginCtrl.cs" />
     <Compile Include="Enums\Enum.cs" />
@@ -134,6 +135,7 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\KaraokeManage.Models.LoaiHangModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

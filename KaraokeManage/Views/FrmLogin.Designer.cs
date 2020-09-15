@@ -131,7 +131,6 @@
             // 
             // btnExit
             // 
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.ImageOptions.Image = global::KaraokeManage.Properties.Resources.Button_Close_icon_16px;
             this.btnExit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnExit.Location = new System.Drawing.Point(216, 211);
@@ -139,10 +138,10 @@
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
-            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLogin.ImageOptions.Image = global::KaraokeManage.Properties.Resources.secrecy_icon_16px;
             this.btnLogin.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnLogin.Location = new System.Drawing.Point(126, 211);
@@ -150,6 +149,7 @@
             this.btnLogin.Size = new System.Drawing.Size(84, 23);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 
@@ -184,6 +184,6 @@
         private DevExpress.XtraEditors.SimpleButton btnExit;
         public DevExpress.XtraEditors.TextEdit txtPassword;
         public DevExpress.XtraEditors.TextEdit txtUserName;
-        public DevExpress.XtraEditors.SimpleButton btnLogin;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
     }
 }

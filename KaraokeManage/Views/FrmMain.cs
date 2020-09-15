@@ -143,17 +143,11 @@ namespace KaraokeManage.Views
             }
         }
 
-        private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DoLogin();
-        }
-
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("Bạn có muốn đăng xuất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DisableEnableMenuLogin(true);
-                btnLogin_ItemClick(sender, e);
             }
         }
 
@@ -204,6 +198,11 @@ namespace KaraokeManage.Views
         private void xtraTabMain_CloseButtonClick(object sender, EventArgs e)
         {
             CloseTabPage();
+        }
+
+        private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DoLogin();
         }
     }
 }

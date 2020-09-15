@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.grcLoaiHang = new DevExpress.XtraGrid.GridControl();
+            this.loaiHangModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grvLoaiHang = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenLoai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MoTa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.IsDelete_Text = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -39,19 +46,16 @@
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.grcLoaiHang = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenLoai = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IsDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcLoaiHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiHangModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,15 +70,72 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(800, 500);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup
+            // grcLoaiHang
             // 
-            this.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup.GroupBordersVisible = false;
-            this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup.Name = "layoutControlGroup";
-            this.layoutControlGroup.Size = new System.Drawing.Size(800, 500);
-            this.layoutControlGroup.TextVisible = false;
+            this.grcLoaiHang.DataSource = this.loaiHangModelBindingSource;
+            this.grcLoaiHang.Location = new System.Drawing.Point(12, 12);
+            this.grcLoaiHang.MainView = this.grvLoaiHang;
+            this.grcLoaiHang.MenuManager = this.mainRibbonControl;
+            this.grcLoaiHang.Name = "grcLoaiHang";
+            this.grcLoaiHang.Size = new System.Drawing.Size(776, 476);
+            this.grcLoaiHang.TabIndex = 4;
+            this.grcLoaiHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvLoaiHang});
+            // 
+            // loaiHangModelBindingSource
+            // 
+            this.loaiHangModelBindingSource.DataSource = typeof(KaraokeManage.Models.LoaiHangModel);
+            // 
+            // grvLoaiHang
+            // 
+            this.grvLoaiHang.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ID,
+            this.TenLoai,
+            this.MoTa,
+            this.IsDelete_Text,
+            this.IsDelete});
+            this.grvLoaiHang.GridControl = this.grcLoaiHang;
+            this.grvLoaiHang.Name = "grvLoaiHang";
+            this.grvLoaiHang.OptionsView.ColumnAutoWidth = false;
+            this.grvLoaiHang.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            // 
+            // ID
+            // 
+            this.ID.AppearanceHeader.Options.UseTextOptions = true;
+            this.ID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ID.Caption = "STT";
+            this.ID.FieldName = "colSTT";
+            this.ID.Name = "ID";
+            this.ID.Visible = true;
+            this.ID.VisibleIndex = 0;
+            this.ID.Width = 80;
+            // 
+            // TenLoai
+            // 
+            this.TenLoai.Caption = "Tên loại hàng";
+            this.TenLoai.FieldName = "colTenLoai";
+            this.TenLoai.Name = "TenLoai";
+            this.TenLoai.Visible = true;
+            this.TenLoai.VisibleIndex = 1;
+            this.TenLoai.Width = 200;
+            // 
+            // MoTa
+            // 
+            this.MoTa.Caption = "Mô tả";
+            this.MoTa.FieldName = "colMoTa";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.Visible = true;
+            this.MoTa.VisibleIndex = 2;
+            this.MoTa.Width = 200;
+            // 
+            // IsDelete_Text
+            // 
+            this.IsDelete_Text.Caption = "Trạng thái";
+            this.IsDelete_Text.FieldName = "colIsDelete_Text";
+            this.IsDelete_Text.Name = "IsDelete_Text";
+            this.IsDelete_Text.Visible = true;
+            this.IsDelete_Text.VisibleIndex = 3;
+            this.IsDelete_Text.Width = 100;
             // 
             // mainRibbonControl
             // 
@@ -163,29 +224,15 @@
             this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
             this.mainRibbonPageGroup.Text = "Chức năng";
             // 
-            // grcLoaiHang
+            // layoutControlGroup
             // 
-            this.grcLoaiHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcLoaiHang.Location = new System.Drawing.Point(12, 12);
-            this.grcLoaiHang.MainView = this.gridView1;
-            this.grcLoaiHang.MenuManager = this.mainRibbonControl;
-            this.grcLoaiHang.Name = "grcLoaiHang";
-            this.grcLoaiHang.Size = new System.Drawing.Size(776, 476);
-            this.grcLoaiHang.TabIndex = 4;
-            this.grcLoaiHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.STT,
-            this.TenLoai,
-            this.MoTa,
-            this.IsDelete});
-            this.gridView1.GridControl = this.grcLoaiHang;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup.GroupBordersVisible = false;
+            this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup.Name = "layoutControlGroup";
+            this.layoutControlGroup.Size = new System.Drawing.Size(800, 500);
+            this.layoutControlGroup.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -196,43 +243,11 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // STT
-            // 
-            this.STT.AppearanceHeader.Options.UseTextOptions = true;
-            this.STT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "colSTT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 80;
-            // 
-            // TenLoai
-            // 
-            this.TenLoai.Caption = "Tên loại hàng";
-            this.TenLoai.FieldName = "colTenLoai";
-            this.TenLoai.Name = "TenLoai";
-            this.TenLoai.Visible = true;
-            this.TenLoai.VisibleIndex = 1;
-            this.TenLoai.Width = 200;
-            // 
-            // MoTa
-            // 
-            this.MoTa.Caption = "Mô tả";
-            this.MoTa.FieldName = "colMoTa";
-            this.MoTa.Name = "MoTa";
-            this.MoTa.Visible = true;
-            this.MoTa.VisibleIndex = 2;
-            this.MoTa.Width = 200;
-            // 
             // IsDelete
             // 
-            this.IsDelete.Caption = "Trạng thái";
+            this.IsDelete.Caption = "IsDelete";
             this.IsDelete.FieldName = "colIsDelete";
             this.IsDelete.Name = "IsDelete";
-            this.IsDelete.Visible = true;
-            this.IsDelete.VisibleIndex = 3;
-            this.IsDelete.Width = 100;
             // 
             // UC_LoaiHang
             // 
@@ -243,12 +258,14 @@
             this.Controls.Add(this.mainRibbonControl);
             this.Name = "UC_LoaiHang";
             this.Size = new System.Drawing.Size(800, 600);
+            this.Load += new System.EventHandler(this.UC_LoaiHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcLoaiHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiHangModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,11 +285,13 @@
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnClose;
         private DevExpress.XtraGrid.GridControl grcLoaiHang;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvLoaiHang;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn TenLoai;
         private DevExpress.XtraGrid.Columns.GridColumn MoTa;
+        private DevExpress.XtraGrid.Columns.GridColumn IsDelete_Text;
+        private System.Windows.Forms.BindingSource loaiHangModelBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn IsDelete;
     }
 }

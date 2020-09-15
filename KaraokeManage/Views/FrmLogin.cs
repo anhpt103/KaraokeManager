@@ -26,8 +26,18 @@ namespace KaraokeManage.Views
             if (e.KeyChar == (char)Keys.Return)
             {
                 if (OnClickLoginMethod != null) OnClickLoginMethod();
-                
+
             }
+        }
+
+        private void btnLogin_Click(object sender, System.EventArgs e)
+        {
+            if (OnClickLoginMethod != null) OnClickLoginMethod();
+        }
+
+        private void btnExit_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
         }
     }
 }
